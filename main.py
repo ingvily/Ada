@@ -6,7 +6,7 @@ import os
 sys.path.append(os.getcwd() + "/GUI")
 sys.path.append(os.getcwd() + "/Objects")
 sys.path.append(os.getcwd() + "/robotImages")
-sys.path.append(os.getcwd() + "/RobotsForGame")
+sys.path.append(os.getcwd() + "/Robots")
 from window import MainWindow
 from PyQt4 import QtGui
 

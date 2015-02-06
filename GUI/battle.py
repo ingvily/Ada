@@ -25,7 +25,7 @@ class Battle(QDialog, Ui_Dialog):
         self.window = parent
         botnames = []
         self.listBots = {}
-        botFiles = os.listdir(os.getcwd() + "/RobotsForGame")
+        botFiles = os.listdir(os.getcwd() + "/Robots")
         for botFile in botFiles:
             if botFile.endswith('.py'):
                 botName = botPath =  botFile[:botFile.rfind('.')]

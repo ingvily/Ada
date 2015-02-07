@@ -86,7 +86,7 @@ class Battle(QDialog, Ui_Dialog):
         dico["height"] = height
         dico["botList"] = botList
         
-        with open(os.getcwd() + "/.datas/lastArenaEasy",  'wb') as file:
+        with open(os.getcwd() + "/.datas/testArenaEasy",  'wb') as file:
             pickler = pickle.Pickler(file)
             pickler.dump(dico)
         file.close()

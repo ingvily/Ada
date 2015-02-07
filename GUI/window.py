@@ -37,7 +37,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         Start the last battle
         """
         
-        with open(os.getcwd() + "/.datas/lastArenaEasy",  'rb') as file:
+        with open(os.getcwd() + "/.datas/testArenaEasy",  'rb') as file:
             unpickler = pickle.Unpickler(file)
             dico = unpickler.load()
         file.close()

@@ -4,7 +4,7 @@
 # git pull
 # git checkout Odin
 # git pull
-# git checkout Froya
+# git checkout Frøya
 # git pull
 # git checkout Tor
 # git pull
@@ -20,4 +20,4 @@ git checkout Tor Robots/Tor.py
 
 git checkout Loke Robots/Loke.py
 
-git checkout Froya Robots/Froya.py
+git checkout Frøya Robots/Froya.py

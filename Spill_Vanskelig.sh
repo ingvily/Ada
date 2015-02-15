@@ -1,4 +1,5 @@
-python main.py lett
+python main_vanskelig.py
 
-git commit -m "test"
+git add --all 
+git commit -m "ny commit"
 git push

@@ -4,7 +4,7 @@
 from robot import Robot 
 
 
-class EasyBot(Robot):
+class BaseBot(Robot):
     
     def sensors(self):  #Nødvendig for å kunne observere arenaen
         pass

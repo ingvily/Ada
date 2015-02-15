@@ -9,7 +9,7 @@ class Idunn(Robot):
        def sensors(self):  #Nødvendig for å kunne observere arenaen
         pass
 
-    def init(self):     # Pimp Din Bot    
+    def init(self):
         #(Rød, Gul, Blå) i verdier fra 0 til 255
         self.setColor(0, 0, 0)
         self.setGunColor(255, 255, 255)

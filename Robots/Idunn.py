@@ -6,7 +6,7 @@ from robot import Robot
 
 class Idunn(Robot):
     
-       def sensors(self):  #Nødvendig for å kunne observere arenaen
+    def sensors(self):  #Nødvendig for å kunne observere arenaen
         pass
 
     def init(self):

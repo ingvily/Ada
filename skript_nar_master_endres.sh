@@ -2,33 +2,23 @@
 # og cherrypicke den man vil
 
  git checkout Idunn
- git cherry-pick bb51be1a55dbb621
- git cherry-pick d6c70d3fa2a527a
- git cherry-pick 2d8e76bfae6cb944
+ git cherry-pick 
  git push
 
  git checkout Odin
- git cherry-pick bb51be1a55dbb621
- git cherry-pick d6c70d3fa2a527a
- git cherry-pick 2d8e76bfae6cb944
+ git cherry-pick 
  git push
  
  git checkout Tor
- git cherry-pick bb51be1a55dbb621
- git cherry-pick d6c70d3fa2a527a
- git cherry-pick 2d8e76bfae6cb944
+ git cherry-pick 
  git push
  
  git checkout Frøya
- git cherry-pick bb51be1a55dbb621
- git cherry-pick d6c70d3fa2a527a
- git cherry-pick 2d8e76bfae6cb944
+ git cherry-pick 
  git push
  
  git checkout Loke
- git cherry-pick bb51be1a55dbb621
- git cherry-pick d6c70d3fa2a527a
- git cherry-pick 2d8e76bfae6cb944
+ git cherry-pick 
  git push
 
 

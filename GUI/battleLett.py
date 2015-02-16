@@ -12,14 +12,16 @@ import pickle
 from Ui_battle import Ui_Dialog
 
 class Battle(QDialog, Ui_Dialog):
+ 
     """
     Class documentation goes here.
     """
-    def __init__(self, parent = None):
+    def __init__(self, arena, parent = None):
         """
         Constructor
         """
         QDialog.__init__(self, parent)
+        self.arena = arena
         self.setupUi(self)
         self.window = parent
         botnames = []
@@ -85,7 +87,7 @@ class Battle(QDialog, Ui_Dialog):
         dico["height"] = height
         dico["botList"] = botList
         
-        with open(os.getcwd() + "/.datas/testArenaEasy",  'wb') as file:
+        with open(os.getcwd() + "/.datas/" + self.arena,  'wb') as file:
             pickler = pickle.Pickler(file)
             pickler.dump(dico)
         file.close()

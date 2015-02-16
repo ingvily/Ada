@@ -20,11 +20,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     """
     Class documentation goes here.
     """
-    def __init__(self, parent = None):
+    def __init__(self, arena, parent = None):
         """
         Constructor
         """
         QMainWindow.__init__(self, parent)
+        self.arena = arena
         self.setupUi(self)
         self.countBattle = 0
         self.timer = QTimer()
@@ -39,7 +40,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         Start the last battle
         """
         
-        with open(os.getcwd() + "/.datas/testArenaEasy",  'rb') as file:
+        with open(os.getcwd() + "/.datas/" + self.arena,  'rb') as file:
             unpickler = pickle.Unpickler(file)
             dico = unpickler.load()
         file.close()
@@ -94,7 +95,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         Battle Menu
         """
-        self.battleMenu = Battle(self)
+        self.battleMenu = Battle(self, arena)
         self.battleMenu.show()
     
     @pyqtSignature("")

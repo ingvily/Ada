@@ -4,7 +4,7 @@
 from robot import Robot 
 
 
-class Loke(Robot):
+class Snotra(Robot):
     
     def sensors(self):  #Nødvendig for å kunne observere arenaen
         pass

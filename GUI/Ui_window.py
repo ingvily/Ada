@@ -74,7 +74,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.label_2)
         self.spinBox = QtGui.QSpinBox(self.centralwidget)
         self.spinBox.setMaximum(10000)
-        self.spinBox.setProperty("value", 10)
+        self.spinBox.setProperty("value", 3) #HER ENDRER MAN DEFAULT ANTALL SPILL
         self.spinBox.setObjectName(_fromUtf8("spinBox"))
         self.horizontalLayout.addWidget(self.spinBox)
         self.verticalLayout.addLayout(self.horizontalLayout)

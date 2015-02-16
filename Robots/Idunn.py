@@ -27,7 +27,5 @@ class Idunn(Robot):
         # at roboten skal ha når den treffer veggen.  
         pass
         
-       
-    def onRobotDeath(self):#NECESARY FOR THE GAME
-        """When my bot die"""
-        self.rPrint ("damn I'm Dead")
+    def onRobotDeath(self):
+        self.rPrint ("Til Valhall!")

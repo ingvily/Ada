@@ -3,5 +3,5 @@
 #git commit -m "ny commit"
 #git push
 
-python main_vanskelig.py
+python main.py testArenaHard
 

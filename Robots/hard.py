@@ -7,26 +7,26 @@ import math
 
 class HardBot(Robot):
     
-    def init(self):     # Pimp Your Bot
-        
-        
-        #(Rød, Gul, Blå) fra 0 til 256
-        self.setColor(254, 0, 0)
-        self.setGunColor(200, 200, 0)
-        self.setRadarColor(255, 60, 0)
-        self.setBulletsColor(0, 200, 100)
+    def init(self):    
 
-        self.radarVisible(True) # if True the radar field is visible
+        #(Rød, Gul, Blå) i verdier fra 0 til 255
+        self.setColor(250, 10, 20)
+        self.setGunColor(0, 0, 0)
+        self.setRadarColor(200, 100, 0)
+        self.setBulletsColor(100, 150, 250)
         
-        #get the map size
+        self.radarVisible(True) 
+
         size = self.getMapSize()
         
         self.lockRadar("gun")
-
         self.setRadarField("thin")
         self.inTheCorner = False
+        
+
     
-    def run(self):      #main loop to command the bot
+    def run(self): 
+        
         pos = self.getPosition()
         if pos.x() > 50 or pos.y() > 50:
             angle = self.getHeading()
@@ -37,6 +37,7 @@ class HardBot(Robot):
                 self.turn(angle-a)
             self.stop()
             self.move(10)
+            self.gunTurn(30)
             self.stop()
         else:
             angle = self.getGunHeading()
@@ -44,50 +45,38 @@ class HardBot(Robot):
                 self.gunTurn(315 - angle)
             elif angle > 315:
                 self.gunTurn(angle-315)
-            self.inTheCorner = True    
+            self.inTheCorner = True
 
-    def sensors(self): 
-        """Tick each frame to have datas about the game"""        
-        pos = self.getPosition() #return the center of the bot
-        x = pos.x() #get the x coordinate
-        y = pos.y() #get the y coordinate
-        
-        angle = self.getGunHeading() #Returns the direction that the robot's gun is facing
-        angle = self.getHeading() #Returns the direction that the robot is facing
-        angle = self.getRadarHeading() #Returns the direction that the robot's radar is facing
-        list = self.getEnemiesLeft() #return a list of the enemies alive in the battle
-        for robot in list:
-            id = robot["id"]
-            name = robot["name"]
-            # each element of the list is a dictionnary with the bot's id and the bot's name
-        
     def onHitWall(self):
-        self.reset() #To reset the run fonction to the begining (auomatically called on hitWall, and robotHit event) 
+        self.reset()        #vil resette run-metoden 
         self.pause(100)
         self.move(-100)
-        self.rPrint('ouch! a wall !')
-    
-    def onTargetSpotted(self, botId, botName, botPos):
-        "when the bot see another one"
-        self.setRadarField("thin")
-        self.rPrint("I see the bot:" + str(botId) + "on position: x:" + str(botPos.x()) + " , y:" + str(botPos.y()))
-        self.gunTurn(5)
+        self.rPrint('au!')
 
-        self.stop()
-        self.fire(5)
-        
-    def onRobotDeath(self):#NECESARY FOR THE GAME
-        """When my bot die"""
-        self.rPrint ("damn I'm Dead")
-
-    def onHitByBullet(self, bulletBotId, bulletBotName, bulletPower): #NECESARY FOR THE GAME
+    def sensors(self): 
         pass
         
-    def onBulletHit(self, botId, bulletId):#NECESARY FOR THE GAME
+    def onRobotHit(self, robotId, robotName): 
+        pass
+        
+    def onHitByRobot(self, robotId, robotName):
+        pass
+
+    def onHitByBullet(self, bulletBotId, bulletBotName, bulletPower): 
+        self.move(20)
+        
+    def onBulletHit(self, botId, bulletId):
         pass
         
     def onBulletMiss(self, bulletId):
         pass
-
-    def onRobotHit(self, robotId, robotName): # when My bot hit another
+        
+    def onRobotDeath(self):
         pass
+        
+    def onTargetSpotted(self, botId, botName, botPos):#NECESARY FOR THE GAME
+        self.setRadarField("thin")
+        self.gunTurn(5)
+
+        self.stop()
+        self.fire(5)

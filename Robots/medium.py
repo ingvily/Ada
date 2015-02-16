@@ -6,57 +6,51 @@ from robot import Robot
 
 class MediumBot(Robot):
     
-    def init(self):     # Pimp Your Bot
+    def init(self):    
         
-        
-        #(Rød, Gul, Blå) fra 0 til 256
-        self.setColor(0, 0, 254)
+        #(Rød, Gul, Blå) i verdier fra 0 til 255
+        self.setColor(0, 200, 100)
         self.setGunColor(200, 200, 0)
         self.setRadarColor(255, 60, 0)
-        self.setBulletsColor(0, 200, 100)
+        self.setBulletsColor(255, 150, 150)
 
-    
-    def run(self):      #main loop to command the bot
-
-        self.move(90) # for moving (negative values go back)
-        self.turn(300) #for turning (negative values turn counter-clockwise)
-        self.stop()
-
-        self.gunTurn(3)
-        self.fire(3)
-        self.stop()
-        """
-        the stop command is used to make moving sequences: here the robot will move 90steps and turn 360° at the same time
-        and next, fire
-        """
-       
-    def sensors(self): 
-        """Tick each frame to have datas about the game"""
-         
-    def onTargetSpotted(self, botId, botName, botPos):
-        "when the bot see another one"
-        self.gunTurn(5)
-        self.stop()
-        self.fire(5)
+        self.radarVisible(True) 
         
-    def onRobotDeath(self):#NECESARY FOR THE GAME
-        """When my bot die"""
-        self.rPrint ("damn I'm Dead")
+        size = self.getMapSize()
+        
+        self.lockRadar("gun")
+        
+    
+    def run(self): 
+        self.gunTurn(180)
+        self.stop()
+
 
     def onHitWall(self):
-        self.reset() #To reset the run fonction to the begining (auomatically called on hitWall, and robotHit event) 
-        self.pause(100)
-        self.move(-100)
+        pass
 
-    def onHitByBullet(self, bulletBotId, bulletBotName, bulletPower): #NECESARY FOR THE GAME
+    def sensors(self): 
         pass
         
-    def onBulletHit(self, botId, bulletId):#NECESARY FOR THE GAME
+    def onRobotHit(self, robotId, robotName): 
         pass
         
+    def onHitByRobot(self, robotId, robotName):
+        pass
+
+    def onHitByBullet(self, bulletBotId, bulletBotName, bulletPower): 
+        pass
+        
+    def onBulletHit(self, botId, bulletId):
+        pass
+
     def onBulletMiss(self, bulletId):
         pass
 
-    def onRobotHit(self, robotId, robotName): # when My bot hit another
+    def onRobotDeath(self):
         pass
 
+    def onTargetSpotted(self, botId, botName, botPos):
+        self.setRadarField("thin")
+        self.stop()
+        self.fire(3)

@@ -7,14 +7,16 @@ sys.path.append(os.getcwd() + "/GUI")
 sys.path.append(os.getcwd() + "/Objects")
 sys.path.append(os.getcwd() + "/robotImages")
 sys.path.append(os.getcwd() + "/Robots")
-from windowMedium import MainWindow
+from window import MainWindow
 from PyQt4 import QtGui
 
+arena = "testArenaEasy"
 
 if __name__ == "__main__":
+   arena = sys.argv[1]
    app = QtGui.QApplication(sys.argv)
    app.setApplicationName("Python-Robocode")
-   myapp = MainWindow()
+   myapp = MainWindow(arena)
    myapp.show()
    sys.exit(app.exec_())
 

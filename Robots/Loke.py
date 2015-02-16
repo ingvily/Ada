@@ -26,4 +26,7 @@ class Loke(Robot):
         # at roboten skal ha når den treffer veggen.  
         pass
         
-       
+    def onRobotDeath(self):
+        self.rPrint ("Til Valhall!")  
+        
+      

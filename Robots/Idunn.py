@@ -6,10 +6,10 @@ from robot import Robot
 
 class Idunn(Robot):
     
-       def sensors(self):  #Nødvendig for å kunne observere arenaen
+    def sensors(self):  #Nødvendig for å kunne observere arenaen
         pass
 
-    def init(self):     # Pimp Din Bot    
+    def init(self):
         #(Rød, Gul, Blå) i verdier fra 0 til 255
         self.setColor(0, 0, 0)
         self.setGunColor(255, 255, 255)
@@ -27,7 +27,5 @@ class Idunn(Robot):
         # at roboten skal ha når den treffer veggen.  
         pass
         
-       
-    def onRobotDeath(self):#NECESARY FOR THE GAME
-        """When my bot die"""
-        self.rPrint ("damn I'm Dead")
+    def onRobotDeath(self):
+        self.rPrint ("Til Valhall!")

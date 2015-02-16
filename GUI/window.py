@@ -9,7 +9,7 @@ from PyQt4 import QtGui
 from PyQt4.QtCore import pyqtSignature,  QTimer,  SIGNAL
 from graph import Graph
 from Ui_window import Ui_MainWindow
-from battleHard import Battle
+from battle import Battle
 import os,  pickle
 from robot import Robot
 from RobotInfo import RobotInfo
@@ -20,11 +20,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     """
     Class documentation goes here.
     """
-    def __init__(self, parent = None):
+    def __init__(self, arena, parent = None):
         """
         Constructor
         """
         QMainWindow.__init__(self, parent)
+        self.arena = arena
         self.setupUi(self)
         self.countBattle = 0
         self.timer = QTimer()
@@ -39,7 +40,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         Start the last battle
         """
         
-        with open(os.getcwd() + "/.datas/testArenaHard",  'rb') as file:
+        with open(os.getcwd() + "/.datas/" + self.arena,  'rb') as file:
             unpickler = pickle.Unpickler(file)
             dico = unpickler.load()
         file.close()
@@ -94,7 +95,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         Battle Menu
         """
-        self.battleMenu = Battle(self)
+        self.battleMenu = Battle(self, arena)
         self.battleMenu.show()
     
     @pyqtSignature("")

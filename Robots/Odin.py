@@ -26,5 +26,8 @@ class Odin(Robot):
         # Erstatt "pass" med den oppførselen du ønsker 
         # at roboten skal ha når den treffer veggen.  
         pass
+
+    def onRobotDeath(self):
+        self.rPrint ("Til Valhall!")  
         
        

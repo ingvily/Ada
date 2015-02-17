@@ -20,7 +20,9 @@ class Loke(Robot):
     def run(self):     
         # Skriv din kode her for å gi roboten den oppførselen du ønsker
         self.pause(10)      
-        self.move(20)
+        self.move(30)
+        self.turn(90)
+        self.fire(4)
     
   
     def onHitWall(self):

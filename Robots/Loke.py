@@ -26,11 +26,11 @@ class Loke(Robot):
         self.move(30)
         self.turn(90)
         self.radarTurn(90)
-        self.gunTurn(40)
+        self.gunTurn(90)
         self.fire(4)
         self.turn(90)
         self.move(30)
-        self.gunTurn(40)
+        self.gunTurn(90)
         self.radarTurn(90)
         self.fire(4)
     

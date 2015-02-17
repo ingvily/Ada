@@ -2,5 +2,5 @@
 #git commit -m "ny commit"
 #git push
 
-python main.py testArenaEasy
+python main.py demo
 

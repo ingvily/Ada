@@ -26,7 +26,9 @@ class Loke(Robot):
     def onHitWall(self):
         # Erstatt "pass" med den oppførselen du ønsker 
         # at roboten skal ha når den treffer veggen.  
-        pass
+        self.turn(90)
+        self.move(30)
+        selv.turn(90)
         
     def onRobotDeath(self):
         self.rPrint ("Til Valhall!")  

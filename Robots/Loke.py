@@ -23,9 +23,15 @@ class Loke(Robot):
         self.move(30)
         self.turn(90)
         self.fire(4)
+        self.move(30)
+        self.turn(90)
+        self.radarTurn(90)
         self.gunTurn(40)
         self.fire(4)
+        self.turn(90)
+        self.move(30)
         self.gunTurn(40)
+        self.radarTurn(90)
         self.fire(4)
     
   
@@ -36,8 +42,9 @@ class Loke(Robot):
         self.move(30)
         selv.turn(90)
 
-    def onTargetSpotted(self):
+    def onTargetSpotted(self, botId, botName, botPos):
         self.fire(10)
+        self.rPrint("Skytskyt")
         
     def onRobotDeath(self):
         self.rPrint ("Til Valhall!")  

@@ -51,6 +51,5 @@ class Loke(Robot):
         self.rPrint("Skytskyt")
         
     def onRobotDeath(self):
-        self.rPrint ("Til Valhall!")  
         
       

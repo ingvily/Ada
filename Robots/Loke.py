@@ -23,6 +23,10 @@ class Loke(Robot):
         self.move(30)
         self.turn(90)
         self.fire(4)
+        self.gunTurn(40)
+        self.fire(4)
+        self.gunTurn(40)
+        self.fire(4)
     
   
     def onHitWall(self):

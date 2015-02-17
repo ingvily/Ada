@@ -46,6 +46,7 @@ class Loke(Robot):
 
     def onTargetSpotted(self, botId, botName, botPos):
         self.fire(10)
+        self.stopRadarTurn(10)
         self.rPrint("Skytskyt")
         
     def onRobotDeath(self):

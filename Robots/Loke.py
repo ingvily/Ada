@@ -35,6 +35,7 @@ class Loke(Robot):
         self.fire(4)
         self.radarTurn(90)
         self.fire(4)
+        self.move(90)
     
   
     def onHitWall(self):

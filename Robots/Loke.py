@@ -35,6 +35,9 @@ class Loke(Robot):
         self.turn(90)
         self.move(30)
         selv.turn(90)
+
+    def onTargetSpotted(self):
+        self.fire(10)
         
     def onRobotDeath(self):
         self.rPrint ("Til Valhall!")  

@@ -11,6 +11,8 @@ from window import MainWindow
 from PyQt4 import QtGui
 
 arena = "testArenaEasy"
+f = open(os.devnull, 'w')
+sys.stderr = f
 
 if __name__ == "__main__":
    arena = sys.argv[1]

@@ -20,14 +20,36 @@ class Loke(Robot):
     def run(self):     
         # Skriv din kode her for å gi roboten den oppførselen du ønsker
         self.pause(10)      
+        self.move(30)
+        self.turn(90)
+        self.fire(10)
+        self.move(30)
+        self.turn(90)
+        self.radarTurn(90)
+        self.fire(4)
+        self.gunTurn(90)
+        self.fire(4)
+        self.turn(90)
+        self.move(30)
+        self.gunTurn(90)
+        self.fire(4)
+        self.radarTurn(90)
+        self.fire(4)
+        self.move(90)
     
   
     def onHitWall(self):
         # Erstatt "pass" med den oppførselen du ønsker 
         # at roboten skal ha når den treffer veggen.  
-        pass
+        self.turn(90)
+        self.move(30)
+        self.turn(90)
+
+    def onTargetSpotted(self, botId, botName, botPos):
+        self.fire(10)
+        self.rPrint("Skytskyt")
         
     def onRobotDeath(self):
-        self.rPrint ("Til Valhall!")  
+        pass
         
       

@@ -12,7 +12,7 @@ class Loke(Robot):
     def init(self):
         #(Rød, Gul, Blå) i verdier fra 0 til 255
         self.setColor(128, 128, 128)
-        self.setGunColor(128, 128, 128)
+        self.setGunColor(128, 0, 0)
         self.setRadarColor(0, 0, 0)
         self.setBulletsColor(200, 200, 200)
 

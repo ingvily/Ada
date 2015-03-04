@@ -37,12 +37,12 @@ class Demo(Robot): #Create a Robot
         self.move(100)
         self.turn(50)
         self.stop()
-        self.fire(2) #to let you you manage if the bullet hit or fail
+        #self.fire(2) #to let you you manage if the bullet hit or fail
         self.move(180)
         self.turn(180)
         self.gunTurn(90) #to turn the gun (negative values turn counter-clockwise)
         self.stop()
-        self.fire(1) # To Fire (power between 1 and 10)
+        #self.fire(1) # To Fire (power between 1 and 10)
         self.radarTurn(180) #to turn the radar (negative values turn counter-clockwise)
         self.stop()
         
@@ -96,6 +96,6 @@ class Demo(Robot): #Create a Robot
     
     def onTargetSpotted(self, botId, botName, botPos):#NECESARY FOR THE GAME
         "when the bot see another one"
-        self.fire(5)
+        #self.fire(5)
         self.rPrint("I see the bot:" + str(botId) + "on position: x:" + str(botPos.x()) + " , y:" + str(botPos.y()))
     

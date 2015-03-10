@@ -9,10 +9,10 @@ class MediumBot(Robot):
     def init(self):    
         
         #(Rød, Gul, Blå) i verdier fra 0 til 255
-        self.setColor(0, 0, 0)
-        self.setGunColor(0, 0, 0)
+        self.setColor(0, 200, 100)
+        self.setGunColor(200, 200, 0)
         self.setRadarColor(255, 60, 0)
-        self.setBulletsColor(255, 255, 255)
+        self.setBulletsColor(255, 150, 150)
 
         self.radarVisible(True) 
         

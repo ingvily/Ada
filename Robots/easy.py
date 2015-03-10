@@ -13,6 +13,8 @@ class EasyBot(Robot):
         self.setGunColor(200, 200, 0)
         self.setRadarColor(254, 60, 0)
         self.setBulletsColor(0, 200, 100)
+        self.radarVisible(True) 
+        self.setRadarField("thin")
 
     
     def run(self):      #main loop to command the bot

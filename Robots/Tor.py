@@ -11,10 +11,12 @@ class Tor(Robot):
 
     def init(self):     # Pimp Din Bot    
         #(Rød, Gul, Blå) i verdier fra 0 til 255
-        self.setColor(0, 0, 0)
+        self.setColor(0, 0, 153)
         self.setGunColor(255, 255, 255)
         self.setRadarColor(0, 0, 0)
         self.setBulletsColor(200, 200, 200)
+        self.radarVisible(True) 
+        self.setRadarField("thin")
 
     
     def run(self):     

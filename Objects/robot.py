@@ -150,7 +150,22 @@ class Robot(QtGui.QGraphicsItemGroup):
         
         #self.a = time.time()
 
+    def onHitWall(self):
+        pass
+
+    def onHitByBullet(self, bulletBotId, bulletBotName, bulletPower): #NECESARY FOR THE GAME
+        pass
+
+    def onBulletMiss(self, bulletId):
+        pass
+
+    def onBulletHit(self, botId, bulletId):#NECESARY FOR THE GAME
+        pass
+
+    def onHitByRobot(self, robotId, robotName):
+        pass
         
+
     def advance(self, i):
         """
         if i ==1:

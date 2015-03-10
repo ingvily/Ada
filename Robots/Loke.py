@@ -15,6 +15,8 @@ class Loke(Robot):
         self.setGunColor(128, 0, 0)
         self.setRadarColor(0, 0, 0)
         self.setBulletsColor(200, 200, 200)
+        self.radarVisible(True) 
+        self.setRadarField("thin")
 
     
     def run(self):     

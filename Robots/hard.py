@@ -10,7 +10,7 @@ class HardBot(Robot):
     def init(self):    
 
         #(Rød, Gul, Blå) i verdier fra 0 til 255
-        self.setColor(0, 0, 0)
+        self.setColor(250, 10, 20)
         self.setGunColor(0, 0, 0)
         self.setRadarColor(200, 100, 0)
         self.setBulletsColor(100, 150, 250)

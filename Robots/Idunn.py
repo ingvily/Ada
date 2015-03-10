@@ -15,7 +15,8 @@ class Idunn(Robot):
         self.setGunColor(255, 255, 255)
         self.setRadarColor(0, 0, 0)
         self.setBulletsColor(200, 200, 200)
-
+        self.radarVisible(True) 
+        self.setRadarField("thin")
     
     def run(self):     
         # Skriv din kode her for å gi roboten den oppførselen du ønsker

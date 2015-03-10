@@ -24,6 +24,8 @@ class LekeBot(Robot):
         self.pause(10)
         self.radarTurn(180) #to turn the radar (negative values turn counter-clockwise)
         self.gunTurn(180);
+        self.move(50);
+        self.turn(30); 
   
     def onHitWall(self):
         # Erstatt "pass" med den oppførselen du ønsker 
@@ -34,15 +36,35 @@ class LekeBot(Robot):
         pass      
     
     def onTargetSpotted(self, botId, botName, botPos):
-        self.fire(1);
-        self.pause(10);
+        self.fire(1)
+        self.move(20)
+        self.pause(10)
 
-#tester gerfra
+#tester gerfra treffer av kuler 
+  
+    def onRobotHit(self, robotId, robotName):
+            self.rPrint("jeg traff en bot")
+
+    def onHitWall(self):
+        self.rPrint("au, jeg traff veggen")
+
+
     def onHitByBullet(self, bulletBotId, bulletBotName, bulletPower): #NECESARY FOR THE GAME
-        pass
-
-    def onBulletHit(self, botId, bulletId):#NECESARY FOR THE GAME
-        pass
+        self.rPrint("ble truffet av en kule")
 
     def onBulletHit(self, botId, bulletId):#NECESARY FOR THE GAME
         self.rPrint("yey")
+
+    def onBulletMiss(self, bulletId):
+        self.rPrint("jeg misset!")
+
+#tester treffer roboter 
+    def onHitByRobot(self, robotId, robotName):
+        self.rPrint("jeg ble truffet av en bot")
+
+    def onRobotHit(self, robotId, robotName):
+        self.rPrint("jeg traff en bot")
+
+    def onHitWall(self):
+        self.rPrint("au, jeg traff veggen")
+

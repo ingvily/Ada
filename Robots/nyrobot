@@ -1,0 +1,9 @@
+from robot import Robot 
+
+
+class minrobot(Robot):
+
+	def init(self):     # Pimp Din Bot    
+	
+	def onHitWall(self):
+        self.rPrint("au, jeg traff veggen")

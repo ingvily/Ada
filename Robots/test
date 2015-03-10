@@ -1,0 +1,6 @@
+from robot import Robot 
+
+
+class test(Robot):
+	def onHitWall(self):
+        self.rPrint("au, jeg traff veggen")

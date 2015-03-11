@@ -13,6 +13,8 @@
 git checkout Snotra
  git pull
 
+git checkout master 
+
 git checkout Idunn Robots/Idunn.py
 
 git checkout Odin Robots/Odin.py

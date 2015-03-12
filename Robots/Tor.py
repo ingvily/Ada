@@ -21,8 +21,7 @@ class Tor(Robot):
     
     def run(self):     
         # Skriv din kode her for å gi roboten den oppførselen du ønsker
-        self.pause(10)     
-        self.gunTurn(10) 
+        self.pause(10)
     
   
     def onHitWall(self):

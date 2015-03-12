@@ -22,7 +22,6 @@ class Froya(Robot):
     def run(self):     
         # Skriv din kode her for å gi roboten den oppførselen du ønsker
         self.pause(10)   
-        self.radarTurn(10)   
     
   
     def onHitWall(self):
